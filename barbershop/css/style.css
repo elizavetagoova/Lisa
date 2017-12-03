@@ -29,16 +29,22 @@ html {
 }
 
 body {
-	margin: 0;
-	padding: 0;
- 	border: 0;
 	font-size: 14px;
 	line-height: 24px;
-	color: #000;
+	color: #fff;
 	font-weight: bold;
+	min-width: 960;
 	font-family: "PT Sans Narrow", sans-serif;	
 	background: #eee;
+	background-image: url("../img/cards-bg.jpg");
 	text-transform: uppercase;
+}
+
+.main-body {
+	background-color: #000;
+	background-image: url("../img/tint.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
 }
 
 h1 {
@@ -56,7 +62,7 @@ a, .btn {
 }
 
 div {
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 }
 
 .upper {
@@ -72,14 +78,52 @@ div {
 	margin: 0 auto;
 }
 
+.btn {
+	display: inline-block;
+	vertical-align: top;
+  	text-align: center;
+  	padding: 10px 0;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+  	text-decoration: none;
+  	font-family: "PT Sans Narrow", sans-serif;
+  	font-weight: bold;
+  	font-size: 14px;
+	line-height: 24px;
+	transition: 0.5s;
+}
 
+.btn:hover,
+.btn:active {
+  background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+  background-color: #000000;
+}
+
+.btn-small {
+	width: 140px;
+}
 /*---------------------
 header
 ---------------------*/
 
-header {
+.main-header {
 	margin-bottom: 60px; 
 	outline: 1px solid red;
+	background-color: #000;
+	color: #fff;
 }
 
 .flex-header {
@@ -87,10 +131,17 @@ header {
 }
 
 .logo {
-	outline: 1px solid red;
-	width: 140px;
+	padding-top: 20px;
+	flex-basis: 140px;
 	margin-right: 20px;
 	margin-left: 20px;
+}
+
+.index-logo {
+	width: 372px;
+	height: 155px;
+	margin: auto;
+	margin-bottom: 74px;
 }
 
 .main-navigation {
@@ -99,42 +150,140 @@ header {
 }
 
 .main-navigation ul {
-/*	display: flex;
-	justify-content: space-between;
-	padding-left: 0;
-	list-style: none;*/
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.main-navigation li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+}
+
+.main-navigation a {
+	display: block;
+	padding: 24px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.main-navigation a:hover {
+	background-color: #242424;
+}
+
+.main-navigation a.active,
+.main-navigation a:active {
+	padding-bottom: 20px;
+	border-bottom: 4px solid white;
 }
 
 .user-block {
 	margin-left: auto;
-	width: 100px;
+	flex-basis: 100px;
+	max-width: 140px;
 }
 
-.index-logo {
-	width: 371px;
-	margin: auto;
-	margin-bottom: 76px;
+.login {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding: 24px 20px;
+	padding-left: 50px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #fff;
+	text-decoration: none;
 }
+
+.login:hover {
+	background-color: #242424;
+}
+
+.login::before {
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: 20px;
+	width: 18px;
+	height: 18px;
+	background-image: url("../img/log-in.png");
+	background-repeat: no-repeat;
+	opacity: 0.3;
+}
+
+.login:hover::before {
+	opacity: 1;
+}
+
 
 /*---------------------
 index
 ---------------------*/
 
 .features {
-	margin-bottom: 80px;
+	margin-bottom: 78px;
 	display: flex;
 	justify-content: space-between;
 }
 .features-item {
 	width: 300px;
+	text-align: center;
+}
+
+.features-name {
+	position: relative;
+	display: block;
+	padding-top: 0;
+	padding-bottom: 32px;
+	margin-bottom: 28px;
+	font-size: 30px;
+	line-height: 42px;
+	outline: 1px solid red;
+}
+
+.features-name::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+  	display: block;
+  	margin-left: -10px;
+  	width: 20px;
+  	height: 20px;
+  	background-color: #ffffff;
+  	transform: rotate(45deg);
+}
+
+.features-item p {
+	margin: 10px;
+  	margin-bottom: 0;
 }
 
 .index-content {
 	display: flex;
-	padding: 55px 80px;
+	padding: 46px 80px;
+	padding-bottom: 50px;
 	margin-bottom: 36px;
+	background-color: #f8f5f2;
+	background-image: url("../img/cards-bg.jpg");
+	color: #000;
 }
 
+.index-content p {
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.index-content-title {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 42px;
+}
 .index-content-left {
 	width: 380px;	
 }
@@ -144,12 +293,106 @@ index
 	margin-left: auto;
 }
 
+.index-content-right p{
+	margin: 0;
+	padding: 0;
+}
+
+.news-preview {
+	padding: 0;
+	margin-bottom: 25px;
+	list-style: none;
+}
+
+.news-preview li {
+	margin-bottom: 22px;
+}
+
+.news-preview a {
+	color: #000;
+	text-decoration: none;
+}
+
+.news-preview p {
+	margin-bottom: 0;
+}
+
+.news-preview time {
+	text-transform: none;
+}
+
+.gallery {
+	position: relative;
+	height: 260px;
+	box-sizing: border-box;
+}
+
+.gallery-content {
+	margin: 0;
+	height: 164px;
+	background-color: #cccccc;
+  	border: 7px solid #ffffff;
+  	box-sizing: content-box;
+  	margin-bottom: 37px;
+}
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.btn-row {
+	font-size: 0;
+}
+.btn-row .btn:first-child{
+	margin-right: 20px;
+}
+
+.gallery .btn {
+	margin: 0;
+	width: 140px;
+}
+
+p.time {
+	margin-top: 10px;
+}
+
+.appointment-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.input-field {
+	width: 140px;
+	margin-bottom: 12px;
+}
+
+.appointment-form input {
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  padding: 12px;
+  width: 140px;
+}
+
+.appointment-form label {
+	display: block;
+	padding-left: 16px; 
+	margin-bottom: 4px;
+}
+
+.appointment-form .btn {
+	width: 100%;
+	margin-top: 8px;
+}
 /*---------------------
 footer
 ---------------------*/
 
 footer {
 	outline: 1px solid red;
+	background-image: url("../img/footer-bg.jpg");
 }
 
 .main-footer {
@@ -176,6 +419,37 @@ footer {
 .footer-social {
 	width: 180px;
 	margin-right: 240px;
+}
+
+.footer-social ul {
+	list-style: none;
+	padding: 0;
+	font-size: 0;
+}
+
+.footer-social li {
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.btn.social-btn {
+	background-color: #000;
+	width: 43px;
+	height: 43px;
+}
+
+.social-btn:hover {
+	filter: invert(100%);
+
+}
+.social-btn-vk {
+	background: url("../img/vk.png") no-repeat center center;
+}
+.social-btn-fb {
+	background: url("../img/facebook.png") no-repeat center center;
+}
+.social-btn-inst {
+	background: url("../img/instagram.png") no-repeat center center;
 }
 
 .footer-copyright {
