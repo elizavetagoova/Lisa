@@ -32,7 +32,7 @@ body {
 	font-size: 14px;
 	line-height: 24px;
 	color: #fff;
-	font-weight: bold;
+	font-weight: 700;
 	min-width: 960;
 	font-family: "PT Sans Narrow", sans-serif;	
 	background: #eee;
@@ -62,12 +62,13 @@ a, .btn {
 }
 
 div {
-	/*outline: 1px solid red;*/
+	outline: 1px solid red;
 }
 
 .upper {
 	text-transform: uppercase;
 }
+
 .noup {
 	text-transform: none;
 }
@@ -121,7 +122,7 @@ header
 
 .main-header {
 	margin-bottom: 60px; 
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 	background-color: #000;
 	color: #fff;
 }
@@ -145,7 +146,7 @@ header
 }
 
 .main-navigation {
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 	width: 630px;
 }
 
@@ -242,7 +243,7 @@ index
 	margin-bottom: 28px;
 	font-size: 30px;
 	line-height: 42px;
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
 }
 
 .features-name::after {
@@ -371,7 +372,7 @@ p.time {
 
 .appointment-form input {
   background-color: #f9f6f3;
-  border: 2px solid #000000;
+  border: 2px solid #000;
   padding: 12px;
   width: 140px;
 }
@@ -391,19 +392,20 @@ footer
 ---------------------*/
 
 footer {
-	outline: 1px solid red;
+	/*outline: 1px solid red;*/
+	background-color: #fff;
 	background-image: url("../img/footer-bg.jpg");
 }
 
 .main-footer {
-	margin-top: 65px;
-	padding-top: 36px;
+	margin-top: 66px;
+	padding-top: 44px;
 	padding-bottom: 44px;
 }
 
 .main-footer-other {
 	margin-top: 48px;
-	padding-top: 36px;
+	padding-top: 44px;
 	padding-bottom: 44px;
 }
 
@@ -412,13 +414,18 @@ footer {
 }
 
 .footer-contacts {
-	width: 320px;
-	margin-right: 60px;
+	width: 310px;
+	margin-right: 90px;
+}
+
+.footer-contacts a {
+	color: #fff;
 }
 
 .footer-social {
 	width: 180px;
 	margin-right: 240px;
+	text-align: center;
 }
 
 .footer-social ul {
@@ -461,15 +468,23 @@ popups
 ---------------------*/
 
 .popup-log {
+	position: relative;
 	width: 460px;
 	margin-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 52px 80px;
 	padding-bottom: 58px;
+	background-image: url("../img/cards-bg.jpg");
 }
 
+.popup-close {
+	position: absolute;
+	top:0;
+	right: -20px;
+}
 .popup-map {
+	position: relative;
 	width: 780px;
 	margin-top: 60px;
 	margin-left: auto;
